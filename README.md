@@ -46,6 +46,6 @@ SO THAT I can check inventory/availability of that specific product
   
   ## Team-Members 
   -- Franklyn Diaz. GitHub: [fjunior1](https://github.com/fjunior1)  
-  -- Mason HAmes. GitHub: [MasonHames](https://github.com/MmasonHames)  
+  -- Mason Hames. GitHub: [MasonHames](https://github.com/MasonHames)  
   -- Logon Pierce. GitHub: [wolverine0824](https://github.com/wolverine0824)  
   -- Wilson Sous. GitHub: [WilsonSous](https://github.com/WilsonSous)  
