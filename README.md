@@ -1,14 +1,14 @@
 # E-Commerce-Products
 
-AS A warehouse manager
-I WANT a website that keeps track of our current inventory of products
-SO THAT WE can update our inventory amounts based on product sales. 
-Along with allowing the users(sales team or management) to create new accounts 
-for team members and create/delete new/existing products listed on the site
-As a User 
-I WANT to search certain products
-SO THAT I can check inventory/availability of that specific product
-
+AS A warehouse manager  
+I WANT a website that keeps track of our current inventory of products  
+SO THAT WE can update our inventory amounts based on product sales.  
+Along with allowing the users(sales team or management) to create new accounts  
+for team members and create/delete new/existing products listed on the site  
+As a User  
+I WANT to search certain products  
+SO THAT I can check inventory/availability of that specific product  
+  
 # Readme generator (Professional)
   
   ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg) https://www.gnu.org/licenses/gpl-3.0
