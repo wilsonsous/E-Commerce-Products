@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/store', (req, res) => {
+    res.render('store');
+});
+
 app.listen(8080, () => {
     console.log('Server is starting at port', 8080);
 });
