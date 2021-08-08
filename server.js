@@ -4,10 +4,11 @@ const expbs = require('express-handlebars')
 const path = require('path');
 
 
-
+// Handlebars settings
 app.engine('handlebars', expbs());
 app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
+
 // Routing
 app.get('/', (req, res) => {
     res.render('index');
