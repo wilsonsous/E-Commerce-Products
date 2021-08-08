@@ -1,11 +1,23 @@
        <header class="main-header">
-            <nav class="main-nav nav">
-                <ul>
-                    <li><a href="/index">HOME</a></li>
-                    <li><a href="/store">STORE</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                </ul>
-            </nav>
+            <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">e Commerce!</a></div>
+        <ul class="links">
+          <li><a href="/index">Home</a></li>
+          <li><a href="/store">store</li>
+          <li><a href="#">Contact</a></li>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
             <h1 class="band-name band-name-large">products</h1>
         </header>
         <section class="container content-section">
@@ -83,4 +95,4 @@
         </section>
         <footer class="main-footer">
         </footer>
-        <script src="/public/js/store.js"></script>
+        <script src="../public/js/store.js"></script>

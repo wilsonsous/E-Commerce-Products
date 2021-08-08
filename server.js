@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const expbs = require('express-handlebars')
 const path = require('path');
+const routes = require('./controllers');
 
 
 
@@ -15,6 +16,14 @@ app.get('/', (req, res) => {
 
 app.get('/store', (req, res) => {
     res.render('store');
+});
+
+app.get('/login', (req, res) => {
+    res.render('login');
+}); 
+
+app.get('/loginFunction', (req, res) => {
+    res.render('loginFunction');
 });
 
 app.listen(8080, () => {
