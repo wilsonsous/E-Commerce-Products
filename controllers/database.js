@@ -11,7 +11,7 @@ module.exports = connection;
 
 function connect() {
     console.log(connection.connect());
-    connection.
+    
     console.log('connect');
     console.log(connection.query('USE e_commerce_prj')); //select the database 
 }
