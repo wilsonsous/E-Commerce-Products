@@ -1,48 +1,61 @@
 <!----------Navigation/Search bar --------->
-  <div class="wrapper">
-    <nav>
-      <input type="checkbox" id="show-search">
-      <input type="checkbox" id="show-menu">
-      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-      <div class="content">
-      <div class="logo"><a href="/">Le Commerce!</a></div>
-        <ul class="links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/store">store</li>
-          <li><a href="/login">Login</a></li>
-      </div>
-      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-      <form action="#" class="search-box">
-        <input type="text" placeholder="Type Something to Search..." required>
-        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-      </form>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+    <a 
+      href="#" 
+      class="navbar-brand mb-0 h1">
+        <img 
+      class="d-inline-block align-top"
+      src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+      width="30" height="30"  />
+      Navbar
+    </a>
+    <button 
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    class="navbar-toggler"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div 
+      class="collapse navbar-collapse" 
+      id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="#" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            Store
+          </a>
+          <ul class="dropdown-menu">
+
+          </ul>
+        </li>
+        <li class="nav-item ">
+          <a href="#" class="nav-link">
+            Login
+          </a>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex">
+      <input type="text" class="form-control me-2">
+      <button type="submit"
+      class="btn btn-outline-success">Search</button>
+    </form>
+  </nav>
+<!-------------Content Boxe ------------>
+<div id="home">
+  <div class="landing-text">
+    <h1>WELCOME!</h1>
+    <h3>Let's shop!</h3>
+    <a href="#" class="btn btn-default btn-lg">Get Started</a>
   </div>
-<!-------------Content Boxes ------------>
-  <div class="container">
-      <div class="box">
-          <div class="icon">01</div>
-          <div class="content">
-              <h3>Content 1</h3>
-              <p>Insert Content here</p>
-              <a href="/store">Inventory</a>
-          </div>
-      </div>
-      <div class="box">
-          <div class="icon">02</div>
-          <div class="content">
-              <h3>Content 2</h3>
-              <p>Insert Content here</p>
-              <a href="/store">Inventory</a>
-          </div>
-      </div>
-      <div class="box">
-          <div class="icon">03</div>
-          <div class="content">
-              <h3>Content 3</h3>
-              <p>Insert Content here</p>
-              <a href="/store">Inventory</a>
-          </div>
-      </div>
-  </div>
-  
+</div>
