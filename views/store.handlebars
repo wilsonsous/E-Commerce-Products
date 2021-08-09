@@ -1,44 +1,101 @@
-       <header class="main-header">
-            <nav class="main-nav nav">
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/store">STORE</a></li>
-                    <li><a href="/login">Login</a></li>
-                </ul>
-            </nav>
-            <h1 class="band-name band-name-large">products</h1>
+  
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+    <a 
+      href="#" 
+      class="navbar-brand mb-0 h1">
+        <img 
+      class="d-inline-block align-top"
+      src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+      width="30" height="30"  />
+      Navbar
+    </a>
+    <button 
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    class="navbar-toggler"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div 
+      class="collapse navbar-collapse" 
+      id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="/" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/store" class="nav-link">
+            Store
+          </a>
+          <ul class="dropdown-menu">
+
+          </ul>
+        </li>
+        <li class="nav-item ">
+          <a href="/login" class="nav-link">
+            Login
+          </a>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex">
+      <input type="text" class="form-control me-2">
+      <button type="submit"
+      class="btn btn-outline-success">Search</button>
+    </form>
+  </nav>
+
+
+  <style>
+      body { 
+          background-color: white;
+          }
+
+      .shop-item-image{
+          width: 200px;
+      }   
+  </style>
+  <body>
+            <h1 class="band-name band-name-large"></h1>
         </header>
         <section class="container content-section">
             <h2 class="section-header">products</h2>
             <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title">Play station 5</span>
+                <div class="item-shop">
                     <img class="shop-item-image" src="/images/ps5-product1.jpeg">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">Play station 5</span>
                         <span class="shop-item-price">$500</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">macBookPro</span>
                     <img class="shop-item-image" src="/images/macbookPro-product2.jpeg">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">macBookPro</span>
                         <span class="shop-item-price">$2,199.00</span>
                         <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">full titleist golf set</span>
                     <img class="shop-item-image" src="/images/golfBag-product3.jpeg">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">full titleist golf set</span>
                         <span class="shop-item-price">$1,700.00</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">iphone 13 pro max</span>
                     <img class="shop-item-image" src="/images/iphone-product4.webp">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">iphone 13 pro max</span>
                         <span class="shop-item-price">$1,200.98</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
@@ -49,17 +106,17 @@
             <h2 class="section-header">MERCH</h2>
             <div class="shop-items">
                 <div class="shop-item">
-                    <span class="shop-item-title">elton john goodbye yellow brick road</span>
                     <img class="shop-item-image" src="/images/album-product5.jpeg">
                     <div class="shop-item-details">
+                        <span class="shop-item-title">elton john goodbye yellow brick road</span>
                         <span class="shop-item-price">$19.99</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">oculus quest 2</span>
                     <img class="shop-item-image" src="/images/oculus-quest-2-product6.webp">
                     <div class="shop-item-details">
+                         <span class="shop-item-title">oculus quest 2</span>
                         <span class="shop-item-price">$499</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
@@ -81,6 +138,5 @@
             </div>
             <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
         </section>
-        <footer class="main-footer">
-        </footer>
+        </body>
         <script src="/public/js/store.js"></script>
