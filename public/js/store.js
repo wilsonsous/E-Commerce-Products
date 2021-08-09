@@ -6,24 +6,24 @@ if (document.readyState == 'loading') {
 
 function ready() {
     const removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    for (const i = 0; i < removeCartItemButtons.length; i++) {
+    for (let i = 0; i < removeCartItemButtons.length; i++) {
         const button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
     }
 
     const quantityInputs = document.getElementsByClassName('cart-quantity-input')
-    for (const i = 0; i < quantityInputs.length; i++) {
+    for (let i = 0; i < quantityInputs.length; i++) {
         const input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
     }
 
     const addToCartButtons = document.getElementsByClassName('shop-item-button')
-    for (const i = 0; i < addToCartButtons.length; i++) {
+    for (let i = 0; i < addToCartButtons.length; i++) {
         const button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
 
-    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+    //document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
 function purchaseClicked() {
@@ -64,7 +64,7 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.classList.add('cart-row')
     const cartItems = document.getElementsByClassName('cart-items')[0]
     const cartItemNames = cartItems.getElementsByClassName('cart-item-title')
-    for (const i = 0; i < cartItemNames.length; i++) {
+    for (let i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
             alert('This item is already added to the cart')
             return
@@ -89,8 +89,8 @@ function addItemToCart(title, price, imageSrc) {
 function updateCartTotal() {
     const cartItemContainer = document.getElementsByClassName('cart-items')[0]
     const cartRows = cartItemContainer.getElementsByClassName('cart-row')
-    const total = 0
-    for (const i = 0; i < cartRows.length; i++) {
+    let total = 0
+    for (let i = 0; i < cartRows.length; i++) {
         const cartRow = cartRows[i]
         const priceElement = cartRow.getElementsByClassName('cart-price')[0]
         const quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
