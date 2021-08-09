@@ -16,11 +16,14 @@ Product.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING
+    },
     price: {
-      type: DataTypes.DECIMAL
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     description: {
