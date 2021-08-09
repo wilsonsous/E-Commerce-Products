@@ -1,4 +1,4 @@
-# E-Commerce-Products
+# Inventory Management System
 
 AS A warehouse manager  
 I WANT a website that keeps track of our current inventory of products  
@@ -10,7 +10,7 @@ As A User
 I WANT to search certain products  
 SO THAT I can check inventory/availability of that specific product  
   
-# Readme generator (Professional)
+# Readme Inventory Management System
   
   ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg) https://www.gnu.org/licenses/gpl-3.0
 
