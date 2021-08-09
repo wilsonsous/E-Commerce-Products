@@ -22,6 +22,7 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
+
 sequelize.sync({force:false}).then(() => {
     app.listen(PORT, () => {
         console.log('Server is starting at', PORT);
