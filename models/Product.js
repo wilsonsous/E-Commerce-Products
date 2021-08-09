@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 
 class Product extends Model {
- 
+
 }
 
 Product.init(
@@ -15,15 +15,25 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    price : {
-        type: DataTypes.DECIMAL
-    },
-    image: {
-        type: DataTypes.STRING
-    },
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
       allowNull: false,
+    },
+    price: {
+      type: DataTypes.DECIMAL
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    provider1: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    provider2: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {
