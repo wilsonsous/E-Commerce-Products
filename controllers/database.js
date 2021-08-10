@@ -1,4 +1,5 @@
 const mysql = require('mysql2');
+//const { HostNotFoundError } = require('sequelize/types');
 
 // constants
 let dbName = 'e_commerce_prj';
@@ -41,7 +42,7 @@ function disconnect() {
 //
 //
 //
-function getUsers( callback) {
+function getUsers(callback) {
     //console.log (connection.query('show tables'));
     connection.query("SELECT * FROM users", function (err, result, fields) {
         if (err) throw err;
@@ -62,13 +63,13 @@ getUsers( (res) => {
 //
 //
 function getLoginInfo(username, callback) {
-    connection.query(`SELECT userName, password FROM users where userName = '${username}'`,  function (err, result, fields) {
-            if (err) throw err;
-            var rows = JSON.parse(JSON.stringify(result));
-            // to be able to return with callback function
-            return callback(rows);
+    connection.query(`SELECT userName, password FROM users where userName = '${username}'`, function (err, result, fields) {
+        if (err) throw err;
+        var rows = JSON.parse(JSON.stringify(result));
+        // to be able to return with callback function
+        return callback(rows);
     });
-    
+
 }
 
 // Example on how to use these queries (TESTED)
@@ -81,15 +82,15 @@ getLoginInfo('fd',  (res) => {
 
 function verifyLogin(userName, password, callback) {
     connection.query(`SELECT userName, password FROM users WHERE userName = '${userName}'`, function (err, result, fields) {
-            let retVal = false;
-            if (err) throw err;
-            if (( userName === result[0].userName ) && ( password === result[0].password )) {
-                retVal = true;
-            }
-            var rows = JSON.parse(JSON.stringify(result));
-            // to be able to return with callback function
-            return callback(retVal);
-        });
+        let retVal = false;
+        if (err) throw err;
+        if ((userName === result[0].userName) && (password === result[0].password)) {
+            retVal = true;
+        }
+        var rows = JSON.parse(JSON.stringify(result));
+        // to be able to return with callback function
+        return callback(retVal);
+    });
 }
 
 // Example on how to use these queries (TESTED)
@@ -104,7 +105,6 @@ verifyLogin('fd', 'diaz',
 
 function getproducts(callback) {
     connection.query(`SELECT * FROM products`, function (err, result, fields) {
-
         return callback(result);
     });
 }
@@ -112,39 +112,77 @@ function getproducts(callback) {
 // Example on how to use these queries (TESTED)
 /*
 getproducts(
-     (res) => {
+    (res) => {
         console.log("products ------");
         console.log(res);
-});
+    });
 */
 
 //
 //
 //
-function addProduct(product, callback) { // add a new product to the inventory
-    connection.query(`SELECT * FROM products`, function (err, result, fields) {
+function addProduct(product, callback) { // add/update product to the products table
 
-        return callback(result);
+    connection.query(`SELECT * FROM products WHERE name = '${product.name}'`, function (err, result, fields) {
+        if (result.length > 0) {
+            // item found, update DB( update everything but the product name)
+            connection.query(`UPDATE products SET price = ${product.price}, description = '${product.description}', provider1 = '${product.provider1}', provider2 = '${product.provider2}' WHERE name = '${product.name}'`,
+                function (err, result, fields) {
+                    if (err) {
+                        console.log("product update error...");
+                    } else {
+                        return callback(1); // added to DB
+                    }
+                });
+        } else {
+            // item not found, add it to DB
+            connection.query(`INSERT INTO products (name, price, description, provider1, provider2) 
+                     VALUES ('${product.name}', ${product.price}, '${product.description}', '${product.provider1}', '${product.provider2}') `,
+                function (err, result, fields) {
+                    if (err) {
+                        console.log("product add error...");
+                        return callback(-1);
+                    } else {
+                        return callback(0); // added to DB
+                    }
+                });
+        }
+
+        /* return:
+        0: added to DB
+        -1: error
+        1:  item already found, updated info
+        */
+       
     });
 }
 
 
-// Example on how to use these queries 
+// Example on how to use these queries (TESTED)
 /*
+let product = { name: "bookbag", price: 30, description: "medium bookbag", provider1: "walmart", provider2: "amazon" };
+
 addProduct(product,
-     (res) => {
-        console.log("product added ------");
-        console.log(res);
-});
+    (res) => {
+        switch (res) {
+            case -1:
+                console.log("product add error ------");
+                break;
+            case 0:
+                console.log("product added ------");
+                break;
+            case 1:
+                console.log("product updated ------");
+                break;
+        }
+    });
 */
 
-
-
 //
 //
 //
-function updateProduct(product, callback) { // changing the price , quantity, etc
-    connection.query(`UPDATE * FROM products WHERE productID = ${product.productID}`, function (err, result, fields) {
+function updateInventory(productID, quantity, callback) { // changing the quantity of a product in inventroy
+    connection.query(`UPDATE inventory SET quantity = ${quantity} WHERE productID = ${productID}`, function (err, result, fields) {
         if (err) throw err;
         // update product in database
 
@@ -152,9 +190,9 @@ function updateProduct(product, callback) { // changing the price , quantity, et
     });
 }
 
-// Example on how to use these queries (TODO)
+// Example on how to use these queries (TESTED)
 /*
-updateProduct(product,
+updateInventory(2,20,
      (res) => {
         console.log("product updated ------");
         console.log(res);
