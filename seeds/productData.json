@@ -1,38 +1,39 @@
 [
   {
-    "name": "Sal",
-    "price": 20.99,
-    "image": "image.jpeg"
-  },
-  {
     "name": "Play station 5",
     "price": 500,
-    "image": "/images/ps5-product1.jpeg"
+    "image": "/images/ps5-product1.jpeg",
+    "sku": 1
   },
   {
     "name": "MacBookPro",
     "price": 2199.00,
-    "image": "/images/macbookPro-product2.jpeg"
+    "image": "/images/macbookPro-product2.jpeg",
+    "sku": 2
   },
   {
     "name": "full titleist golf set",
     "price": 1700.00,
-    "image": "/images/golfBag-product3.jpeg"
+    "image": "/images/golfBag-product3.jpeg",
+    "sku": 3
   },
   {
     "name": "iphone 13 pro max",
     "price": 1200.98,
-    "image": "/images/iphone-product4.webp"
+    "image": "/images/iphone-product4.webp",
+    "sku": 4
   },
   {
     "name": "elton john goodbye yellow brick road",
     "price": 19.99,
-    "image": "/images/album-product5.jpeg"
+    "image": "/images/album-product5.jpeg",
+    "sku": 5
   },
   {
     "name": "oculus quest 2",
     "price": 499,
-    "image": "/images/oculus-quest-2-product6.webp"
+    "image": "/images/oculus-quest-2-product6.webp",
+    "sku": 6
   }
   
 ]

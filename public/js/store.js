@@ -1,3 +1,4 @@
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -23,9 +24,9 @@ function ready() {
         button.addEventListener('click', addToCartClicked)
     }
 
-    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+    
 }
-
+document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 function purchaseClicked() {
     alert('Thank you for your purchase')
     const cartItems = document.getElementsByClassName('cart-items')[0]
@@ -52,7 +53,7 @@ function quantityChanged(event) {
 function addToCartClicked(event) {
     const button = event.target
     const shopItem = button.parentElement.parentElement
-    const title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+    const name = shopItem.getElementsByClassName('shop-item-name')[0].innerText
     const price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     const imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
     addItemToCart(title, price, imageSrc)

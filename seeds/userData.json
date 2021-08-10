@@ -1,52 +1,42 @@
 [
     {
       "name": "Sal",
-      "lastName": "jones",
       "phone": 223872282722,
       "email": "sal@hotmail.com",
       "address":"100 dayton ave",
       "preferred": "yes",
-      "userName": "sal",
       "password": "password12345"
     },
     {
       "name": "Lernantino",
-      "lastName": "smith",
       "phone": 2343845858,
       "email": "lernantino@gmail.com",
       "address":"234 monroe st",
       "preferred": "yes",
-      "userName": "lernantino",
       "password": "password12345"
     },
     {
       "name": "Amiko",
-      "lastName": "mosley",
       "phone": 43452345345,
       "email": "amiko2k20@aol.com",
       "address":"120 union st",
       "preferred": "yes",
-      "userName": "amiko",
       "password": "password12345"
     },
     {
       "name": "Jordan",
-      "lastName": "Diaz",
       "phone": 23334434422,
       "email": "jordan99@msn.com",
       "address":"346 memorial drive",
       "preferred": "no",
-      "userName": "jordan",
       "password": "password12345"
     },
     {
       "name": "Blake",
-      "lastName": "barron",
       "phone": 1234356456,
       "email": "the_blake@yahoo.com",
       "address":"123 main st",
       "preferred": "no",
-      "userName": "blake",
       "password": "password12345"
     }
   ]

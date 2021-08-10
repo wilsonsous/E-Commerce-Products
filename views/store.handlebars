@@ -68,7 +68,7 @@
                 <div class="item-shop">
                     <img class="shop-item-image" src="/images/ps5-product1.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-title">Play station 5</span>
+                        <span class="shop-item-Name">Play station 5</span>
                         <span class="shop-item-price">$500</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
@@ -76,7 +76,7 @@
                 <div class="shop-item">
                     <img class="shop-item-image" src="/images/macbookPro-product2.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-title">macBookPro</span>
+                        <span class="shop-item-Name">macBookPro</span>
                         <span class="shop-item-price">$2,199.00</span>
                         <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
@@ -84,7 +84,7 @@
                 <div class="shop-item">
                     <img class="shop-item-image" src="/images/golfBag-product3.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-title">full titleist golf set</span>
+                        <span class="shop-item-Name">full Nameist golf set</span>
                         <span class="shop-item-price">$1,700.00</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
@@ -92,7 +92,7 @@
                 <div class="shop-item">
                     <img class="shop-item-image" src="/images/iphone-product4.webp">
                     <div class="shop-item-details">
-                        <span class="shop-item-title">iphone 13 pro max</span>
+                        <span class="shop-item-Name">iphone 13 pro max</span>
                         <span class="shop-item-price">$1,200.98</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
@@ -101,8 +101,7 @@
             <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
+                <th scope="col">Name</th>
                 <th scope="col">Image</th>
                 <th scope="col">Price</th>
                 <th scope="col"></th>
@@ -112,7 +111,7 @@
               {{#each products}}
               <tr class="shop-item">
                 <th scope="row">{{id}}</th>
-                <td>{{title}}</td>
+                <td>{{name}}</td>
                 <td> <img class="shop-item-image" src="{{image}}"></td>
                 <td>${{price}}</td>
                 <td><button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button></td>
@@ -131,11 +130,11 @@
             <div class="cart-items">
             </div>
             <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
+                <strong class="cart-total-Name">Total</strong>
                 <span class="cart-total-price">$0</span>
             </div>
             <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
         </section>
-        <script src="/js/store.js"></script>
+        <script src="./js/store.js"></script>
 
         
