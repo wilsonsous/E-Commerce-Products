@@ -2,7 +2,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
     <a 
-      href="#" 
+      href="/" 
       class="navbar-brand mb-0 h1">
         <img 
       class="d-inline-block align-top"/>
@@ -64,7 +64,7 @@
         </header>
         <section class="container content-section">
             <h2 class="section-header">products</h2>
-            <div class="shop-items">
+            <!--<div class="shop-items">
                 <div class="item-shop">
                     <img class="shop-item-image" src="/images/ps5-product1.jpeg">
                     <div class="shop-item-details">
@@ -97,28 +97,29 @@
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>o
-            </div>
-        </section>
-        <section class="container content-section">
-            <h2 class="section-header">MERCH</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <img class="shop-item-image" src="/images/album-product5.jpeg">
-                    <div class="shop-item-details">
-                        <span class="shop-item-title">elton john goodbye yellow brick road</span>
-                        <span class="shop-item-price">$19.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <img class="shop-item-image" src="/images/oculus-quest-2-product6.webp">
-                    <div class="shop-item-details">
-                         <span class="shop-item-title">oculus quest 2</span>
-                        <span class="shop-item-price">$499</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
+            </div>-->
+            <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Image</th>
+                <th scope="col">Price</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each products}}
+              <tr class="shop-item">
+                <th scope="row">{{id}}</th>
+                <td>{{title}}</td>
+                <td> <img class="shop-item-image" src="{{image}}"></td>
+                <td>${{price}}</td>
+                <td><button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
         </section>
         <section class="container content-section">
             <h2 class="section-header">CART</h2>
