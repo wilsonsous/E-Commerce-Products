@@ -36,7 +36,7 @@ console.log(name,email,password)
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/store');
     } else {
       alert(response.statusText);
     }
